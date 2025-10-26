@@ -1,0 +1,63 @@
+/* * {
+    background-color: green;
+} */
+
+
+/* h1, h3, p {
+    color: purple;
+} */
+
+
+/* h1 {
+    color: purple;
+} */
+/* p {
+    color: purple;
+} */
+
+
+/* .test {
+    color: pink;
+} */
+
+/* #abc{
+    color: blue;
+} */
+
+/* ol > li > a > span{
+    color: chocolate;
+} */
+
+/* ol p{
+    color:red;
+} */
+
+/* .heading+h4{
+    color: orange;
+} */
+
+
+/* .heading~p{
+    color: red;
+} */
+
+#text{
+    color: purple ;
+}
+
+.heading{
+    color: red;
+}
+
+
+h1{
+    background-color: red;
+    color: green !important;
+}
+
+textarea{
+    color: red;
+    background-color: green;
+}
+     
+
