@@ -1,0 +1,44 @@
+/* li {
+    list-style: square;
+    list-style-position: outside;
+
+}
+
+li:hover{
+    cursor: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwqWexQIDv4gW1_qPjiiz7EdgFkYrYkNg_nA&s");
+    cursor: ;
+
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    empty-cells: hide;
+}
+*/
+li {
+    list-style: none;
+    display: inline;
+    margin-right: 10px;
+} 
+
+.line {
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+.main{
+    background-color: blue;
+    padding: 10px;
+}
+
+.para {
+    background-color: orange;
+    width: 200px;
+    display: inline-block;
+}

@@ -1,0 +1,75 @@
+@import url(index.css);
+
+/* .parent{
+    border: 2px solid green;
+    width: 500px;
+    height: 500px;
+    position: relative;
+} */
+
+/* .box {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 100px;
+    left: 900px;
+    right: -10px;
+    bottom: 0px;
+} */
+/* .box2 {
+    background-color: red;
+    width: 300px;
+    height: 300px;
+} */
+
+.icon {
+    width: 40px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.box3 {
+    background-color: blue;
+    /* width: 200px; */
+    width: 25%;
+    height: 200px;
+    position: absolute;
+    /* z-index: -1; */
+}
+
+.box4 {
+    background-color: red;
+    /* width: 200px; */
+    width: 55%;
+    height: 200px;
+    float: right;
+}
+
+.box5 {
+    background-color: yellow;
+    /* width: 200px; */
+    width: 20%;
+    height: 200px;
+    float: right;
+}
+
+.bold {
+    width: 1200px;
+    /* width: 100%; */
+    background-color: aqua;
+    height: 200px;
+    margin: 0 auto;
+}
+
+body {
+    /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLptOjOJenqt7Bz6qsECtviNs6J1SylWar3w&s); */
+    /* background-repeat: no-repeat; */
+    width: 100%;
+    height: 100vh;
+    /* background-position: center center; */
+    /* background-size: contain; */
+    background: #22C1C3;
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}

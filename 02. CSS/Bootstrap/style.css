@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+}
+
+.main{
+    background-color: orange;
+    width: 100%;
+    height: 400px;
+}
+
+@media only screen and (min-width: 500px) {
+    .main {
+        background-color: red;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .main {
+        background-color: pink;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .main {
+        background-color: green;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .main {
+        background-color: blue;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .main {
+        background-color: blue;
+    }
+}
+
+.size {
+    width: 100px;
+    height: 200px;
+}
+
+.abc{
+    border: 1px oslid rgb(169, 156, 156);
+}

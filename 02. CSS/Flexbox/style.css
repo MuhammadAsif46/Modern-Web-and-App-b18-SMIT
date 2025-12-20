@@ -1,0 +1,78 @@
+/* :root{
+    --bgcolor: #ff0000;
+    --color: #d1b121;
+    --mainheading: #1f2332;
+}
+
+h1{
+    background-color: var(--bgcolor);
+    color: var(--color)
+} */
+
+body{
+    margin: 0;
+}
+
+.parent {
+    background-color: orange;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    /* flex-wrap: wrap-reverse; */
+    /* flex-flow: column wrap; */
+    /* justify-content: space-evenly; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+    /* align-content: space-around; */
+    /* gap: 40px; */
+}
+
+.child{
+    background-color: red;
+    width: 150px;
+    height: 150px;
+    border: 2px solid white
+}
+.child1{
+    background-color: blue;
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    /* order: -1; */
+    flex: 2
+}
+.child2{
+    background-color: green;
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    /* order: 2; */
+    flex: 4;
+}
+.child3{
+    background-color: red;
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    /* order: 3; */
+}
+.child4{
+    background-color: pink;
+    width: 150px;
+    height: 150px;
+    border: 2px solid white
+}
+.child5{
+    background-color: purple;
+    width: 150px;
+    height: 150px;
+    border: 2px solid white
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+}
