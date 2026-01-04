@@ -1,56 +1,72 @@
 // console.log("hello");
 
-
-// Chapter : 35 : Functions:
-
-// var now = new Date();
-// var theHr = now.getHours();
-// var theMin = now.getMinutes();
-// var theSec = now.getSeconds();
-// console.log("time: " + theHr + ":" + theMin + ":" + theSec);
-
 // function greet(){
-//     console.log("Happy New Year 2026!!");
+//     console.log("welcome to our website!");
 // }
 
 // greet()
 // greet()
+// greet()
+// greet()
 
+// var userValue = prompt("Enter word")
 
-// Chapter : 36 : Functions Passing them data:
-
-// function hello(asif, fahad){ // parameters
-//     console.log(asif);
-//     console.log(fahad);
+// function palandromeWord(value){ // parameter
+//     var res = value.split("").reverse().join("")
+//     if(value == res){
+//         console.log("it's a palindrome word");
+//     } else {
+//         console.log("it's not palindrome word");
+//     }
 // }
 
-// hello("abc", 123, true) // arguments
-// hello("hello world", 123456) +// arguments
+// palandromeWord(userValue) // argument
 
+// var text = "hello"
+// // var text = "Smith"
 
-// function sum(a , b){ // parameters
-//     console.log(a + b);
+// function abc(){
+//     // text = "SMIT"
+//     var test = "saylani"
+//     console.log(text); // SMIT
 // }
-// function mul(a , b){
-//     console.log(a * b);
+// abc()
+// console.log(test); // SMITH
+
+// var day = "sat"
+
+// if(day == "sun"){
+//     console.log("Chutti ka din!");
+// } else if (day == "mon"){
+//     console.log("Kam ka din");
+// } else if (day == "sat"){
+//     console.log("ghoomny ka din");
+// } else if(day == "fri"){
+//     console.log("half day");
+// } else {
+//     console.log("bekaar day");
 // }
 
-// sum(1 , 4) // arguments
-// sum(6 , 4)
-// sum(16 , 14)
-// mul(6 , 4)
+var day = "fri"
+// var month = "jan"
+
+switch (day) {
+    case "sun":
+        console.log("Chutti ka din!");
+        break;
+    case "mon":
+        console.log("Kam ka din");
+        break;
+    case "sat":
+        console.log("ghomny ka din");
+        break;
+    case "fri":
+        console.log("half day");
+        break;
+    default: {
+        console.log("bekaar day");
+    }
+}
 
 
-// Chapter : 37 : Functions Passing data back from them:
 
-// var username = prompt("enter your name")
-// console.log(username);
-
-
-// function sum(x, y, z) {
-//     console.log(x + y + z);
-//     return x + y + z
-// }
-
-// var addition = sum(2, 4, 5)
-// console.log(addition);
