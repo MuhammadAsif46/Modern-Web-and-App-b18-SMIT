@@ -1,10 +1,6 @@
 // var a;
-// Destructuring 		
-// Default parameters - 		
-// Rest parameter 		
-// Spread Operator
 // Hoisting -- cover
-// Arrow function - cover
+// Arrow function -- cover
 
 
 // var a = "world"
