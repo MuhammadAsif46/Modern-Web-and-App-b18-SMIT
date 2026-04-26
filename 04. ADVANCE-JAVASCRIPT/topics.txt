@@ -14,8 +14,10 @@
 14. Generators			-- Pending	  
 15. Modules			-- Done	   -- (24-Apr-2024)
 16. Higher-order function	-- Done	   -- (24-Apr-2024)
-17. CallBack			-- Pending	  
-18. Promises			-- Pending	 
+17. CallBack			-- Done	   -- (26-Apr-2024)
+18. Promises			-- Done	   -- (26-Apr-2024)
 19. Exponentiation Operator	-- Done	   -- (24-Apr-2024)
 20. Classes			-- Pending	  
-21. Optional chaining		-- Done    -- (19-Apr-2024)	
+21. Optional chaining		-- Done    -- (19-Apr-2024)
+
+22. Fetch methods (get, post, put, delete) -- pending	
