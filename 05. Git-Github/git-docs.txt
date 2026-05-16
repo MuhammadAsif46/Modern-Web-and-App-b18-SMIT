@@ -1,0 +1,12 @@
+1. git --version
+2. git config --global user.name "github-username"
+3. git config --global user.email "github-email"
+4. git config --list
+5. git init
+6. git status
+7. git add <file-name1> <file-name2>
+8. git commit -m "update code"
+9. git push
+10. git clone "repo-url"
+11. git log
+12. git log --oneline
