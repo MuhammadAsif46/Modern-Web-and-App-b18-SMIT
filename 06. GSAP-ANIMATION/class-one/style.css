@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: red; */
+    width: 100%;
+    height: 100vh;
+}
+
+.box1{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin-top: 20px;
+}
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin-top: 20px;
+}
+
+
+.parent{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.menu{
+    display: flex;
+    /* justify-content: ; */
+    gap: 20px;
+}
+
+li {
+    list-style: none;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.btn {
+    background-color: darkcyan;
+    /* width: 40px; */
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 150px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main {
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.list {
+    background-color: black;
+    color: #fff;
+    padding: 30px;
+}
+
+.logo-parent{
+    display: flex;
+    /* background-color: red; */
+    height: 100%;
+    position: relative;
+    justify-content: center;
+}
+
+.football{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+}
