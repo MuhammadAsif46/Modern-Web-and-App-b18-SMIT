@@ -4,7 +4,7 @@
 |------------------------------|---------|
 | TS Compiler                   | done    |
 | Type Annotations              | done    |
-| Interfaces                    | pending |
+| Interfaces                    | done    |
 | Classes                       | pending |
 | Generics                      | pending |
 | Enums                         | pending |
