@@ -2,13 +2,13 @@
 
 | Topic                         | Status  |
 |------------------------------|---------|
-| TS Compiler                   | done    |
-| Type Annotations              | done    |
-| Interfaces                    | done    |
-| Classes                       | pending |
-| Generics                      | pending |
-| Enums                         | pending |
-| Type Inference                | done    |
+| TS Compiler                   | Done    |
+| Type Annotations              | Done    |
+| Interfaces                    | Done    |
+| Classes                       | Done    |
+| Generics                      | Done    |
+| Enums                         | Done    |
+| Type Inference                | Done    |
 | Union and Intersection Types  | pending |
 | Type Guards                   | pending |
 | Decorators                    | pending |
