@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudinary Upload</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Cloudinary File Upload</h1>
+
+        <!-- Image Selection -->
+
+        <input
+            type="file"
+            id="imageInput"
+            accept="image/*">
+
+        <br><br>
+
+        <!-- Preview -->
+
+        <img
+            id="previewImage"
+            src=""
+            alt="Preview">
+
+        <br><br>
+
+        <!-- Upload -->
+
+        <button id="uploadBtn" disabled>
+
+            Upload Image
+
+        </button>
+
+        <br><br>
+
+        <!-- Result -->
+
+        <img
+            id="uploadedImage"
+            src=""
+            alt="Uploaded Image">
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
