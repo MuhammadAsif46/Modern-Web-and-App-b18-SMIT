@@ -3,14 +3,13 @@ import { getAuth,createUserWithEmailAndPassword , signInWithEmailAndPassword } f
 import { getFirestore,doc, setDoc } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAtyYX7DKWnUM3OyeCXiwsTY3dLeJEgzho",
-    authDomain: "smit-b18-class.firebaseapp.com",
-    databaseURL: "https://smit-b18-class-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "smit-b18-class",
-    storageBucket: "smit-b18-class.firebasestorage.app",
+    apiKey: "<Enter your>",
+    authDomain: "<Enter your>",
+    projectId: "<Enter your>",
+    storageBucket: "<Enter your>",
     messagingSenderId: "322917110595",
-    appId: "1:322917110595:web:5d50e03396ec0d35fe15f6",
-    measurementId: "G-WR83BLHLPY"
+    appId: "<Enter your>",
+    measurementId: "<Enter your>"
 };
 
 const app = initializeApp(firebaseConfig);
