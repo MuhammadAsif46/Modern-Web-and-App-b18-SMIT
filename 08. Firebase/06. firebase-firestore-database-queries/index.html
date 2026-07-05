@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log in &middot; User Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="auth-body">
+
+  <main class="auth-shell">
+    <section class="auth-card glass">
+      <div class="brand">
+        <span class="brand-mark">UM</span>
+        <h1>User Management System</h1>
+      </div>
+
+      <div class="tabs" role="tablist">
+        <button id="tab-login" class="tab active" role="tab">Log in</button>
+        <button id="tab-signup" class="tab" role="tab">Sign up</button>
+      </div>
+
+  
+      <div id="panel-login" class="panel">
+        <form id="login-form" novalidate>
+          <label for="login-email">Email</label>
+          <input id="login-email" type="email" placeholder="you@example.com" required autocomplete="email" />
+
+          <label for="login-password">Password</label>
+          <input id="login-password" type="password" placeholder="••••••••" required autocomplete="current-password" />
+
+          <p id="login-error" class="form-error" role="alert"></p>
+
+          <button type="submit" class="btn btn-primary btn-block">Log in</button>
+        </form>
+      </div>
+
+      <div id="panel-signup" class="panel hidden">
+        <form id="signup-form" novalidate>
+          <label for="signup-email">Email</label>
+          <input id="signup-email" type="email" placeholder="you@example.com" required autocomplete="email" />
+
+          <label for="signup-password">Password</label>
+          <input id="signup-password" type="password" placeholder="At least 6 characters" required minlength="6" autocomplete="new-password" />
+
+          <label for="signup-confirm">Confirm password</label>
+          <input id="signup-confirm" type="password" placeholder="Repeat password" required minlength="6" autocomplete="new-password" />
+
+          <p id="signup-error" class="form-error" role="alert"></p>
+
+          <button type="submit" class="btn btn-primary btn-block">Create account</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="auth.js"></script>
+</body>
+</html>

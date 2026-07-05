@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard &middot; User Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dashboard-body">
+
+  <header class="navbar glass">
+    <div class="navbar-brand">
+      <span class="brand-mark">UM</span>
+      <span class="brand-name">User Management</span>
+    </div>
+    <div class="navbar-user">
+      <span id="user-email" class="user-email">Loading…</span>
+      <button id="logout-btn" class="btn btn-ghost">Log out</button>
+    </div>
+  </header>
+
+  <main class="dashboard-grid">
+
+    <section class="card glass form-card">
+      <h2 id="form-title">Add a user</h2>
+      <form id="user-form" novalidate>
+        <input type="hidden" id="user-id" />
+
+        <label for="full-name">Full name</label>
+        <input id="full-name" type="text" placeholder="Jane Doe" required />
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="jane@example.com" required />
+
+        <div class="field-row">
+          <div>
+            <label for="age">Age</label>
+            <input id="age" type="number" min="0" max="130" placeholder="28" required />
+          </div>
+          <div>
+            <label for="city">City</label>
+            <input id="city" type="text" placeholder="Karachi" required />
+          </div>
+        </div>
+
+        <label for="profession">Profession</label>
+        <input id="profession" type="text" placeholder="Software Engineer" required />
+
+        <p id="form-error" class="form-error" role="alert"></p>
+
+        <div class="form-actions">
+          <button type="submit" id="form-submit-btn" class="btn btn-primary">Save user</button>
+          <button type="button" id="form-cancel-btn" class="btn btn-ghost hidden">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+
+    <section class="card glass table-card">
+      <div class="table-card-header">
+        <h2>Users</h2>
+        <span id="user-count" class="badge">0</span>
+      </div>
+
+      <div class="table-wrap">
+        <table class="user-table">
+          <thead>
+            <tr>
+              <th>Full name</th>
+              <th>Email</th>
+              <th>Age</th>
+              <th>City</th>
+              <th>Profession</th>
+              <th class="actions-col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="user-table-body">
+           
+          </tbody>
+        </table>
+        <p id="empty-state" class="empty-state hidden">
+          No users yet. Add your first one using the form.
+        </p>
+        <p id="loading-state" class="empty-state">Loading users…</p>
+      </div>
+    </section>
+
+  </main>
+
+
+  <div id="view-modal" class="modal-overlay hidden">
+    <div class="modal glass">
+      <button id="modal-close-btn" class="modal-close" aria-label="Close">&times;</button>
+      <h2>User details</h2>
+      <dl class="detail-list" id="modal-body">
+       
+      </dl>
+    </div>
+  </div>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
