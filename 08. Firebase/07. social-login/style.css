@@ -1,0 +1,23 @@
+div{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column */
+    gap: 20px;
+} 
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 50px;
+    padding: 10px;
+    width: 200px;
+}
+
+img{
+    margin-right: 10px;
+}
