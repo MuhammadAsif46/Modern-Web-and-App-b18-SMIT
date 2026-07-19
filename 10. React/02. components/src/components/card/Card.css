@@ -1,0 +1,15 @@
+.card-heading{
+    color: greenyellow;   
+    text-align: center;
+}
+
+.main {
+    background-color: aqua;
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+p {
+    text-align: center;
+}
