@@ -1,0 +1,17 @@
+
+.app{
+  display: flex;
+  justify-content: space-around;
+}
+
+.main{
+  border: 2px solid red;
+  width: 300px;
+  height: 450px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.main > img {
+  border-radius: 20px;
+}
