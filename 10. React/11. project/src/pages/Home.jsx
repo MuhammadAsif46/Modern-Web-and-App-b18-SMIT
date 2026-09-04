@@ -3,19 +3,33 @@ import Navbar from '../components/Navbar/Navbar'
 import axios from 'axios'
 import MuiCard from '../components/MuiCard/MuiCard'
 import MuiModal from '../components/MuiModal/MuiModal'
+import { useSearchParams } from 'react-router-dom'
 
 const Home = () => {
 
     const [products, setProducts] = useState([])
     const [open, setOpen] = React.useState(false);
     const [cardDetails, setCardDetails] = React.useState({});
+    let [searchParams, setSearchParams] = useSearchParams();
 
 
     useEffect(() => {
-        axios('https://fakestoreapi.com/products')
-            .then(json => setProducts(json.data))
-            .catch(err => console.log(err))
-    }, [])
+        const category = searchParams.get("category")
+        if (!category || category === "all") {
+            axios('https://fakestoreapi.com/products')
+                .then(json => setProducts(json.data))
+                .catch(err => console.log(err))
+        }
+    }, [searchParams])
+
+    useEffect(() => {
+        const category = searchParams.get("category")
+        if (category && category !== "all") {
+            axios(`https://fakestoreapi.com/products/category/${category}`)
+                .then(json => setProducts(json.data))
+                .catch(err => console.log(err))
+        }
+    }, [searchParams])
 
     const viewDetails = (id) => {
         axios(`https://fakestoreapi.com/products/${id}`)

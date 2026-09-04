@@ -14,12 +14,20 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Badge } from '@mui/material';
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
+import { useSearchParams } from 'react-router-dom';
+import { useContext } from 'react';
+import CartContext from '../../context/cartContent';
+import MuiDrawer from '../MuiDrawer/MuiDrawer';
 
-const pages = ['Electronics', 'Jewelery', "Men's clothing", "Women's clothing"];
+const pages = ["All", 'Electronics', 'Jewelery', "Men's clothing", "Women's clothing"];
 
 function Navbar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
+    let [searchParams, setSearchParams] = useSearchParams();
+    const [open, setOpen] = React.useState(false)
+
+    const { cart } = useContext(CartContext)
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -38,6 +46,7 @@ function Navbar() {
 
     return (
         <AppBar position="static" sx={{ backgroundColor: "#2a9d8f" }}>
+            <MuiDrawer cartDetails={cart} open={open} setOpen={setOpen}/>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     {/* small Screen */}
@@ -118,17 +127,24 @@ function Navbar() {
                         {pages.map((page) => (
                             <Button
                                 key={page}
-                                onClick={handleCloseNavMenu}
+                                onClick={() => setSearchParams({ category: page.toLowerCase() })}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
                                 {page}
                             </Button>
                         ))}
-                        <IconButton >
+                    </Box>
+                    <Box>
+                        <IconButton
+                            size="large"
+                            aria-label="show 17 new notifications"
+                            color="inherit"
+                            onClick={() => setOpen(true)}
+                        >
                             <Badge
-                                badgeContent={1}
-                                // color="secondary"
-                                // max={maxVisibleNotifications}
+                                badgeContent={cart.length}
+                                color="error"
+                            // max={maxVisibleNotifications}
                             >
                                 <ShoppingCart />
                             </Badge>
