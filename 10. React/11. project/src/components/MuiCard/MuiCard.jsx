@@ -11,19 +11,14 @@ import { useContext } from 'react';
 
 export default function MuiCard({ val, viewDetails }) {
 
-    const { setCart } = useContext(CartContext)
+    const { addToCart } = useContext(CartContext)
 
-    const addToCart = () => {
-        const cartData = JSON.parse(localStorage.getItem("cart")) || []
-        // console.log(cartData);
-        cartData.push({ ...val, qty: 1 })
-        localStorage.setItem("cart", JSON.stringify(cartData))
-        setCart(cartData)
-
+    const handleAddToCart = () => {
+        addToCart(val)
     }
 
     return (
-        <Card sx={{ maxWidth: 300, paddingBottom: 6, position: "relative" }}>
+        <Card sx={{ maxWidth: 300, paddingBottom: 6, position: "relative", borderRadius: 3, transition: 'transform 180ms ease, box-shadow 180ms ease', '&:hover': { transform: 'translateY(-4px)', boxShadow: 5 } }}>
             <CardMedia
                 component="img"
                 alt="green iguana"
@@ -42,7 +37,7 @@ export default function MuiCard({ val, viewDetails }) {
                 <Rating className='mt-5' name="read-only" value={val.rating.rate} readOnly />
             </CardContent>
             <CardActions className='absolute bottom-2 '>
-                <Button variant="contained" onClick={addToCart} className='cart-btn'>Add to Cart</Button>
+                <Button variant="contained" onClick={handleAddToCart} className='cart-btn'>Add to Cart</Button>
                 <Button variant="outlined" onClick={() => viewDetails(val.id)} className='detail-btn'>View Details</Button>
             </CardActions>
         </Card>

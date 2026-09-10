@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import ProductDetail from '../ProductDetail/ProductDetail';
 
@@ -10,17 +9,17 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 900,
+    width: { xs: 'calc(100% - 24px)', sm: 'calc(100% - 48px)', md: 900 },
+    maxHeight: 'calc(100vh - 32px)',
+    overflowY: 'auto',
     bgcolor: 'background.paper',
-    border: '2px solid #2a9d8f',
+    border: '1px solid rgba(42, 157, 143, 0.25)',
+    borderRadius: 3,
     boxShadow: 24,
     // p: 2,
 };
 
 export default function MuiModal({ setOpen, open, cardDetails }) {
-
-    console.log(cardDetails);
-
 
     const handleClose = () => setOpen(false);
 
@@ -33,7 +32,7 @@ export default function MuiModal({ setOpen, open, cardDetails }) {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style}>
-                  <ProductDetail cardDetails={cardDetails}/>
+                  <ProductDetail cardDetails={cardDetails} onClose={handleClose} />
                 </Box>
             </Modal>
         </div>

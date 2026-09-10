@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Badge } from '@mui/material';
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useContext } from 'react';
 import CartContext from '../../context/cartContent';
 import MuiDrawer from '../MuiDrawer/MuiDrawer';
@@ -27,7 +27,10 @@ function Navbar() {
     let [searchParams, setSearchParams] = useSearchParams();
     const [open, setOpen] = React.useState(false)
 
+    const navigate = useNavigate();
+
     const { cart } = useContext(CartContext)
+    const cartItemCount = cart.reduce((count, item) => count + item.qty, 0)
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -54,7 +57,7 @@ function Navbar() {
                         variant="h6"
                         // noWrap
                         component="a"
-                        href="#app-bar-with-responsive-menu"
+                        onClick={()=>navigate("/")}
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
@@ -109,7 +112,7 @@ function Navbar() {
                         variant="h5"
                         noWrap
                         component="a"
-                        href="#app-bar-with-responsive-menu"
+                        href="/"
                         sx={{
                             mr: 2,
                             display: { xs: 'flex', md: 'none' },
@@ -142,7 +145,7 @@ function Navbar() {
                             onClick={() => setOpen(true)}
                         >
                             <Badge
-                                badgeContent={cart.length}
+                                badgeContent={cartItemCount}
                                 color="error"
                             // max={maxVisibleNotifications}
                             >

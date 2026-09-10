@@ -1,23 +1,33 @@
-import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import SkipNextIcon from '@mui/icons-material/SkipNext';
 import { Button, CardActions, Chip, Rating } from '@mui/material';
+import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import CartContext from '../../context/cartContent';
 
-export default function ProductDetail({ cardDetails }) {
-    const theme = useTheme();
+export default function ProductDetail({ cardDetails, onClose }) {
+    const { addToCart } = useContext(CartContext);
+    const navigate = useNavigate();
+
+    const handleAddToCart = () => {
+        addToCart(cardDetails);
+        onClose();
+    };
+
+    const handleBuyNow = () => {
+        addToCart(cardDetails);
+        onClose();
+        navigate('/checkout');
+    };
 
     return (
-        <Card sx={{ display: 'flex', padding: 2 }}>
+        <Card sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, padding: { xs: 1, sm: 2 }, boxShadow: 'none' }}>
             <CardMedia
                 component="img"
-                sx={{ width: 200, objectFit: "contain" }}
+                sx={{ width: { xs: '100%', sm: 200 }, height: { xs: 180, sm: 260 }, objectFit: "contain" }}
                 image={cardDetails.image}
 
                 alt="Live from space album cover"
@@ -43,8 +53,8 @@ export default function ProductDetail({ cardDetails }) {
                     </Box>
                     <Rating className='mt-5' name="read-only" value={cardDetails.rating.rate} readOnly />
                     <CardActions className=''>
-                        <Button variant="contained" className='cart-btn'>Add to Cart</Button>
-                        <Button variant="outlined" className='detail-btn'>Buy Now</Button>
+                        <Button variant="contained" className='cart-btn' onClick={handleAddToCart}>Add to Cart</Button>
+                        <Button variant="outlined" className='detail-btn' onClick={handleBuyNow}>Buy Now</Button>
                     </CardActions>
                 </CardContent>
                 <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
