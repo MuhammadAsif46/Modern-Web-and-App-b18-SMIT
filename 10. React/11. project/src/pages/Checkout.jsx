@@ -9,6 +9,7 @@ import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
 import Navbar from '../components/Navbar/Navbar'
 import CartContext from '../context/cartContent'
+import axios from 'axios'
 
 const initialFormData = {
     fullName: '',
@@ -34,6 +35,14 @@ export default function Checkout() {
         // This object is ready to be sent to a future place-order API.
         const orderData = { customer: formData, items: cart, total: cartTotal }
         console.log('Order ready for API integration:', orderData)
+
+        axios.post("http://localhost:5000/order", orderData)
+        .then((response) => {
+            console.log('Order placed successfully:', response.data)
+        })
+        .catch((error) => {
+            console.error('Error placing order:', error)
+        })
     }
 
     return (
