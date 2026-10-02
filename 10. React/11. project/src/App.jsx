@@ -6,6 +6,7 @@ import CartContext from './context/cartContent'
 import { Route, Routes } from 'react-router-dom'
 import Snackbar from '@mui/material/Snackbar'
 import Alert from '@mui/material/Alert'
+import About from './pages/About'
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Snackbar
         open={toastOpen}
