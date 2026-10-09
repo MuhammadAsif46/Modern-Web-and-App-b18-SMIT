@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom'
 import Snackbar from '@mui/material/Snackbar'
 import Alert from '@mui/material/Alert'
 import About from './pages/About'
+import Contact from './pages/Contact'
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Snackbar
         open={toastOpen}
