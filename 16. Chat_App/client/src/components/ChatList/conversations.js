@@ -1,0 +1,82 @@
+// Initial demo conversations; Workspace copies their messages into local state.
+export const conversations = [
+  {
+    id: 'chatrix',
+    name: 'Chatrix AI',
+    message: 'How can I help you today?',
+    time: 'Today',
+    unread: 1,
+    category: 'Personal',
+    kind: 'bot',
+    verified: true,
+    messages: [
+      { from: 'them', text: 'Hey Bilal! Welcome back to Chatrix 👋' },
+      { from: 'them', text: 'How can I help you today?' },
+    ],
+  },
+  {
+    id: 'developers',
+    name: 'Developer Team',
+    message: 'Let’s ship the update 🚀',
+    time: 'Today',
+    category: 'Groups',
+    kind: 'group',
+    members: ['Maya', 'Noah', 'Bilal'],
+    messages: [
+      { from: 'them', name: 'Maya', text: 'The new dashboard is looking great.' },
+      { from: 'me', text: 'Thanks! Just pushed the last update.' },
+      { from: 'them', name: 'Noah', text: 'Let’s ship the update 🚀' },
+    ],
+  },
+  {
+    id: 'friends',
+    name: 'Bilal Friends',
+    message: 'See you soon!',
+    time: 'Today',
+    category: 'Personal',
+    kind: 'photo',
+    messages: [
+      { from: 'them', name: 'Bilal', text: 'Are we still meeting for coffee?' },
+      { from: 'me', text: 'Absolutely, see you soon!' },
+    ],
+  },
+  {
+    id: 'study',
+    name: 'Study Group',
+    message: 'Notes shared 📄',
+    time: 'Yesterday',
+    category: 'Groups',
+    kind: 'study',
+    members: ['Amina', 'Bilal'],
+    messages: [
+      { from: 'them', name: 'Amina', text: 'I added the lecture notes here.' },
+      { from: 'them', text: 'Notes shared 📄' },
+    ],
+  },
+  {
+    id: 'family',
+    name: 'Family',
+    message: 'Okay 👍',
+    time: 'Yesterday',
+    category: 'Groups',
+    kind: 'family',
+    members: ['Mom', 'Dad', 'Bilal'],
+    messages: [
+      { from: 'them', name: 'Mom', text: 'Dinner is at seven tonight.' },
+      { from: 'me', text: 'Okay 👍' },
+    ],
+  },
+  {
+    id: 'work',
+    name: 'Work Updates',
+    message: 'Project is on track ✅',
+    time: 'Monday',
+    category: 'Groups',
+    kind: 'work',
+    members: ['Bilal', 'Project team'],
+    messages: [
+      { from: 'them', name: 'Project team', text: 'Sprint review is moved to Thursday.' },
+      { from: 'me', text: 'Project is on track ✅' },
+    ],
+  },
+]
